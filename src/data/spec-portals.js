@@ -1,5 +1,17 @@
 const portalGroups = [
   {
+    name: '浏览器',
+    list: [],
+  },
+  {
+    name: 'HTML',
+    list: [],
+  },
+  {
+    name: 'JS',
+    list: [],
+  },
+  {
     name: '规范标准',
     list: [
       {
@@ -32,10 +44,10 @@ const portalGroups = [
       },
       {
         name: 'OpenAPI',
-        homepage: 'https://swagger.io/docs/specification/about/',
+        homepage: 'https://openapis.org',
         desc: 'OpenAPI 规范为 RESTful API 定义了一个与语言无关的标准接口',
         icon: '',
-        repository: '',
+        repository: 'https://github.com/OAI/OpenAPI-Specification',
       },
       {
         name: 'Markdown 基本语法',

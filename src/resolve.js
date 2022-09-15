@@ -30,10 +30,10 @@ async function resolveByHomepage(url) {
 
   const desc = document.title;
 
-  const domain = url.replace(/^https?:\/\//, '').replace(/\/.*$/, '');
-  const icon = await getFavicon(domain);
+  // const domain = url.replace(/^https?:\/\//, '').replace(/\/.*$/, '');
+  // const icon = await getFavicon(domain);
 
-  return { desc, icon, homepage: url, repository };
+  return { desc, icon: '', homepage: url, repository };
 }
 
 async function resolveByRepo(url) {
