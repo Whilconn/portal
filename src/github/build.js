@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-const { resolveByRepo, resolveByHomepage } = require('./resolve');
+const { crawlRepo } = require('./crawl-repo');
+const { crawlHomepage } = require('./crawl-homepage');
 const { portalGroups } = require('./data/portals');
 
 async function build() {
@@ -12,14 +13,14 @@ async function build() {
     for (const portal of list) {
       console.log(`处理: ${portal.name} ...`);
 
-      let info;
-      if (portal.repository) info = await resolveByRepo(portal.repository);
-      else info = await resolveByHomepage(portal.homepage);
+      const repoInfo = await crawlRepo(portal.repository);
+      const siteInfo = {} || (await crawlHomepage(repoInfo.homepage || portal.homepage));
 
       group.list.push({
         ...portal,
-        ...info,
-        desc: portal.desc || info.desc,
+        ...repoInfo,
+        icon: portal.icon || siteInfo.icon,
+        desc: portal.desc || siteInfo.desc || repoInfo.desc,
         mirrors: portal.mirrors,
       });
     }
