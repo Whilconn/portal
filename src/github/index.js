@@ -2,8 +2,8 @@ const { build } = require('./build');
 const { validate } = require('./validate');
 
 async function start() {
-  await build();
-  validate();
+  const portalGroups = await build();
+  validate(portalGroups);
 }
 
 start().then();

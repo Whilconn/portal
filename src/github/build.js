@@ -14,22 +14,26 @@ async function build() {
       console.log(`处理: ${portal.name} ...`);
 
       const repoInfo = await crawlRepo(portal.repository);
-      const siteInfo = {} || (await crawlHomepage(repoInfo.homepage || portal.homepage));
+      const siteInfo = { icon: '', desc: '' } || (await crawlHomepage(repoInfo.homepage || portal.homepage));
 
       group.list.push({
         ...portal,
         ...repoInfo,
-        icon: portal.icon || siteInfo.icon,
+        homepage: repoInfo.homepage || siteInfo.homepage || portal.homepage,
+        icon: siteInfo.icon || portal.icon,
         desc: portal.desc || siteInfo.desc || repoInfo.desc,
         mirrors: portal.mirrors,
       });
     }
   }
 
-  const file = path.resolve(__dirname, 'data/portal-new.json');
+  const file = path.resolve(__dirname, '../../ignore/portal-new.json');
   fs.writeFileSync(file, JSON.stringify(portalGroups, null, 4), 'utf8');
 
+  console.log(`\n Generated file: ${file}`);
   console.log(`\n[${arguments.callee.name}]: 🚀 Done!`);
+
+  return portalGroups;
 }
 
 module.exports = { build };

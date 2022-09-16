@@ -1,14 +1,10 @@
-const { portalGroups } = require('./data/portals');
-
-function validate() {
+function validate(portalGroups) {
   console.log(`[${arguments.callee.name}]: processing...\n`);
 
   let total = 0;
   let errCount = 0;
   for (const group of portalGroups) {
-    const list = group.list;
-
-    for (const portal of list) {
+    for (const portal of group.list) {
       total++;
       const { name, repository, homepage } = portal;
 
@@ -19,7 +15,7 @@ function validate() {
 
       if (!reg.test(repo) && !reg.test(home)) {
         errCount++;
-        console.log(name, repository, homepage);
+        console.warn('warning: strange name!', name, repository, homepage);
       }
     }
   }
