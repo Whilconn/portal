@@ -13,16 +13,32 @@ async function build() {
     for (const portal of list) {
       console.log(`处理: ${portal.name} ...`);
 
-      const repoInfo = await crawlRepo(portal.repository);
-      const siteInfo = { icon: '', desc: '' } || (await crawlHomepage(repoInfo.homepage || portal.homepage));
+      let repoInfo = {};
+      try {
+        repoInfo = await crawlRepo(portal.repository);
+      } catch (e) {
+        console.error('[ERROR]', e.stack);
+      }
+
+      const homepage = repoInfo.homepage || portal.homepage || '';
+      let siteInfo = {};
+
+      try {
+        const origin = new URL(homepage).origin;
+        if (homepage && !origin.includes('github.')) {
+          siteInfo = await crawlHomepage(homepage);
+        }
+      } catch (e) {
+        console.error('[ERROR]', e.stack);
+      }
 
       group.list.push({
         ...portal,
         ...repoInfo,
-        homepage: repoInfo.homepage || siteInfo.homepage || portal.homepage,
-        icon: siteInfo.icon || portal.icon,
-        desc: portal.desc || siteInfo.desc || repoInfo.desc,
-        mirrors: portal.mirrors,
+        homepage,
+        icon: siteInfo.icon || portal.icon || '',
+        desc: portal.desc || siteInfo.desc || repoInfo.desc || '',
+        mirrors: portal.mirrors || [],
       });
     }
   }

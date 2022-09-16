@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { httpGet } = require('./request');
+const { httpGet } = require('../utils/request');
 
 const GH_HOME = 'https://github.com';
 const GH_API = 'https://api.github.com';
@@ -38,5 +38,4 @@ async function crawlRepo(url) {
  * @example
  * crawlRepo("https://github.com/vuejs/core").then(JSON.stringify).then(console.log);
  */
-
 module.exports = { crawlRepo };
