@@ -31,10 +31,7 @@ async function updateRepos(db, repoList) {
     console.log(`[${sourceRepo.name}] crawl homepage: ${homepage} ...`);
     let siteInfo = {};
     try {
-      const origin = new URL(homepage).origin;
-      if (homepage && !origin.includes('github.')) {
-        siteInfo = await crawlHomepage(homepage);
-      }
+      if (homepage) siteInfo = await crawlHomepage(homepage);
     } catch (e) {
       console.error('[ERROR]', e.stack);
     }

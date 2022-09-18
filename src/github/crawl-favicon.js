@@ -22,11 +22,9 @@ async function loadFavicon(iconLink, toBase64) {
 async function crawlFavicon(homepage, document) {
   if (!document) document = await loadDocument(homepage);
 
-  const links = [];
+  const links = ['/favicon.ico'];
   const s1 = 'link[rel~="icon"],link[href~="favicon"],img[src~="favicon"]';
   document.querySelectorAll(s1).forEach((n) => links.push(n.href || n.src));
-
-  links.push('/favicon.ico');
 
   const s2 = 'link[href*="favicon"],img[src*="favicon"],link[rel*="icon"],link[href*="logo"],img[src*="logo"]';
   document.querySelectorAll(s2).forEach((n) => links.push(n.href || n.src));
