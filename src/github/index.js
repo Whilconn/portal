@@ -1,9 +1,9 @@
-const { build } = require('./build');
-const { validate } = require('./validate');
+const { updateAllRepos } = require('./update-repos');
+const { validateRepos } = require('./validate-repos');
 
 async function start() {
-  const portalGroups = await build();
-  validate(portalGroups);
+  const repos = await updateAllRepos();
+  validateRepos(repos);
 }
 
 start().then();

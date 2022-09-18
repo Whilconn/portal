@@ -1,0 +1,74 @@
+[
+  {
+    "id": "00116deb-3a1b-436e-9ba7-850ddc074900",
+    "name": "CSS"
+  },
+  {
+    "id": "1320225d-aafd-4bc2-b905-f88d061804f5",
+    "name": "web 框架"
+  },
+  {
+    "id": "5b37d5f0-73f2-40ef-8191-f257633a3f55",
+    "name": "React"
+  },
+  {
+    "id": "f1d00080-e8e4-4ed0-b709-e58fe341198d",
+    "name": "Vue"
+  },
+  {
+    "id": "6b5eb1d7-417c-4a19-bb7a-8753fac2f495",
+    "name": "Angular"
+  },
+  {
+    "id": "3d8c4e29-6f45-42b0-b057-4ca42d784f31",
+    "name": "组件库"
+  },
+  {
+    "id": "01eddc15-ef94-4852-92dd-277e4b2ed3d3",
+    "name": "小程序框架"
+  },
+  {
+    "id": "76e4eaad-b652-406e-8d22-ff158875aa68",
+    "name": "状态管理"
+  },
+  {
+    "id": "7b134731-94d2-42cc-919a-30e917dd9933",
+    "name": "模板引擎"
+  },
+  {
+    "id": "af7b8c0d-614a-4653-bcaa-48bc8d125d0b",
+    "name": "JS库"
+  },
+  {
+    "id": "486276d2-d6e2-422c-9876-d8b390f0e8b2",
+    "name": "微前端"
+  },
+  {
+    "id": "83ed90d2-d0d1-4e04-865d-6d37f30a3f82",
+    "name": "Node.js"
+  },
+  {
+    "id": "aa4c59ae-49e5-41e0-b55d-34a6efc191fe",
+    "name": "可视化工具"
+  },
+  {
+    "id": "a3e459e0-e874-4e32-b8e8-209e0bf80904",
+    "name": "Linters"
+  },
+  {
+    "id": "49e4de85-eca1-41dc-8e02-5b28efa2703d",
+    "name": "编译构建"
+  },
+  {
+    "id": "9045ae09-b5a2-4b4d-bdf1-a6f25bfea527",
+    "name": "API"
+  },
+  {
+    "id": "0a96a2e0-42bd-4ce2-ad4e-67cd4b12b644",
+    "name": "测试工具"
+  },
+  {
+    "id": "812c74dc-68fb-48bd-a3d8-543511620caf",
+    "name": "Mock"
+  }
+]

@@ -22,16 +22,21 @@ async function loadFavicon(iconLink, toBase64) {
 async function crawlFavicon(homepage, document) {
   if (!document) document = await loadDocument(homepage);
 
-  const links = ['/favicon.ico'];
-  document.querySelectorAll('link[rel*="icon"]').forEach((n) => {
-    if (n.href) links.push(n.href);
-  });
-  document.querySelectorAll('img[src*="logo"]').forEach((n) => {
-    if (n.src) links.push(n.src);
-  });
+  const links = [];
+  const s1 = 'link[rel~="icon"],link[href~="favicon"],img[src~="favicon"]';
+  document.querySelectorAll(s1).forEach((n) => links.push(n.href || n.src));
+
+  links.push('/favicon.ico');
+
+  const s2 = 'link[href*="favicon"],img[src*="favicon"],link[rel*="icon"],link[href*="logo"],img[src*="logo"]';
+  document.querySelectorAll(s2).forEach((n) => links.push(n.href || n.src));
 
   for (let l of links) {
+    if (!l) continue;
+
+    // 相对路径转完整链接
     if (!/^https?:/.test(l)) l = new URL(l, homepage).href;
+
     const res = await loadFavicon(l);
     if (res) return res;
   }

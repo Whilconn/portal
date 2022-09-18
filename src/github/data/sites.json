@@ -1,0 +1,115 @@
+[
+  {
+    "name": "浏览器",
+    "list": []
+  },
+  {
+    "name": "HTML",
+    "list": []
+  },
+  {
+    "name": "JS",
+    "list": []
+  },
+  {
+    "name": "规范标准",
+    "list": [
+      {
+        "name": "MDN",
+        "homepage": "https://developer.mozilla.org/zh-CN/docs/Web",
+        "desc": "提供 Web 技术文档，学习 Web 开发的最佳实践",
+        "icon": "",
+        "repository": ""
+      },
+      {
+        "name": "ECMAScript",
+        "homepage": "https://ecma262.docschina.org/",
+        "desc": "ECMAScript 2018 标准",
+        "icon": "",
+        "repository": ""
+      },
+      {
+        "name": "JSON Schema",
+        "homepage": "http://json-schema.org/",
+        "desc": "JSON Schema 是一个词汇表，可以验证、注释和操作 JSON 文档",
+        "icon": "",
+        "repository": ""
+      },
+      {
+        "name": "GraphQL",
+        "homepage": "http://graphql.cn/",
+        "desc": "一种用于 API 的查询语言",
+        "icon": "",
+        "repository": ""
+      },
+      {
+        "name": "OpenAPI",
+        "homepage": "https://openapis.org",
+        "desc": "OpenAPI 规范为 RESTful API 定义了一个与语言无关的标准接口",
+        "icon": "",
+        "repository": "https://github.com/OAI/OpenAPI-Specification"
+      },
+      {
+        "name": "Markdown 基本语法",
+        "homepage": "https://www.markdownguide.org/basic-syntax/",
+        "repository": "",
+        "desc": "",
+        "icon": ""
+      },
+      {
+        "name": "GitHub 风格 Markdown 规范",
+        "homepage": "https://gfm.docschina.org/zh-hans/",
+        "repository": "https://github.com/docschina/GFM-docs",
+        "desc": "",
+        "icon": ""
+      },
+      {
+        "name": "markdown-it 中文文档",
+        "homepage": "https://markdown-it.docschina.org/",
+        "repository": "https://github.com/markdown-it/markdown-it",
+        "desc": "Markdown 解析器。完全支持 CommonMark 规范，并且进行语法扩展、提供可编写插件和快速编译",
+        "icon": ""
+      }
+    ]
+  },
+  {
+    "name": "编程教程",
+    "list": [
+      {
+        "name": "现代 JavaScript 教程",
+        "homepage": "https://zh.javascript.info/",
+        "desc": "以最新的 JavaScript 标准为基准，通过简单但足够详细的内容，为你讲解从基础到高阶的 JavaScript 相关知识。",
+        "icon": "",
+        "repository": ""
+      },
+      {
+        "name": "学习 RxJS 操作符",
+        "homepage": "https://rxjs-cn.github.io/learn-rxjs-operators/",
+        "desc": "通过每个操作符的清晰示例及解释来进行 RxJS 的学习",
+        "icon": "",
+        "repository": ""
+      },
+      {
+        "name": "TypeScript 入门教程",
+        "homepage": "https://ts.xcatliu.com/",
+        "repository": "https://github.com/xcatliu/typescript-tutorial",
+        "desc": "从 JavaScript 程序员的角度总结思考，循序渐进的理解 TypeScript",
+        "icon": ""
+      },
+      {
+        "name": "JavaScript Promise 迷你书",
+        "homepage": "http://liubin.org/promises-book/",
+        "desc": "基于 Promise 进行异步编程的基本使用方法以及测试的编写方法、应用及反模式等内容的文档",
+        "icon": "",
+        "repository": ""
+      },
+      {
+        "name": "Rust 编程语言",
+        "homepage": "https://doc.rust-lang.org/book/",
+        "desc": "这是一本有关 Rust的入门书籍",
+        "icon": "",
+        "repository": ""
+      }
+    ]
+  }
+]

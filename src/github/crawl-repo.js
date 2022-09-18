@@ -30,7 +30,6 @@ async function crawlRepo(url) {
     stars: repoInfo.stargazers_count,
     desc: repoInfo.description,
     pushTime: new Date(repoInfo.pushed_at).getTime(),
-    crawlTime: Date.now(),
   };
 }
 
