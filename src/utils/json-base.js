@@ -33,8 +33,11 @@ class JsonBase {
     if (!content) return [];
 
     const json = JSON.parse(content);
-    if (Array.isArray(json)) return json;
-    throw new Error(`Documents should be json array!`);
+    if (!Array.isArray(json)) throw new Error(`Documents should be json array!`);
+
+    json.forEach((v) => (v.id = v.id || uuidv4()));
+
+    return json;
   }
 
   // private

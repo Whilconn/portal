@@ -27,13 +27,18 @@ async function updateRepos(db, repoList) {
     }
 
     const homepage = ghInfo.homepage || sourceRepo.homepage || '';
+    const sites = [homepage, ...(sourceRepo.mirrors || [])].filter(Boolean);
+    let siteInfo = {};
 
     console.log(`[${sourceRepo.name}] crawl homepage: ${homepage} ...`);
-    let siteInfo = {};
-    try {
-      if (homepage) siteInfo = await crawlHomepage(homepage);
-    } catch (e) {
-      console.error('[ERROR]', e.stack);
+    for (const site of sites) {
+      if (['desc', 'icon'].every((k) => siteInfo.hasOwnProperty(k) && siteInfo[k])) break;
+
+      try {
+        siteInfo = await crawlHomepage(site);
+      } catch (e) {
+        console.error('[ERROR]', e.stack);
+      }
     }
 
     const newRepo = {

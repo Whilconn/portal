@@ -5,24 +5,17 @@ const { httpGet } = require('../utils/request');
 const GH_HOME = 'https://github.com';
 const GH_API = 'https://api.github.com';
 const GH_REPO_API = `${GH_API}/repos`;
-const GH_ORG_API = `${GH_API}/orgs`;
 
 const tokenPath = path.resolve(__dirname, '../../ignore/.gh-token');
 const token = fs.readFileSync(tokenPath, 'utf8');
 const BASE_CONFIG = token ? { headers: { Authorization: `Bearer ${token}` } } : {};
 
 async function crawlRepo(url) {
-  url = url.replace(/\/$/, '');
-  const name = url.replace(GH_HOME, '');
+  // 校验 github 仓库链接是否合法
+  const repoReg = new RegExp(`^${GH_HOME}/[^/]+/[^/]+/?$`, 'i');
+  if (!repoReg.test(url)) throw new Error('The url is not valid github repository!');
 
-  let repoInfo;
-  if (name.lastIndexOf('/')) {
-    repoInfo = await httpGet(url.replace(GH_HOME, GH_REPO_API), BASE_CONFIG);
-  } else {
-    // 取组织中 stars 最多的项目
-    const repos = await httpGet(url.replace(GH_HOME, GH_ORG_API) + '/repos?per_page=100', BASE_CONFIG);
-    repoInfo = repos.sort((a, b) => a.stargazers_count - b.stargazers_count).pop();
-  }
+  const repoInfo = await httpGet(url.replace(GH_HOME, GH_REPO_API), BASE_CONFIG);
 
   return {
     homepage: repoInfo.homepage || '',
