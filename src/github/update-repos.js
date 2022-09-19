@@ -9,7 +9,7 @@ async function updateAllRepos() {
   const repoList = await db.find();
   await updateRepos(db, repoList);
 
-  console.log(`\n Updated file: ${db.filePath}, affected records: ${repoList.length}.`);
+  console.log(`\nUpdated file: ${db.filePath}, affected records: ${repoList.length}.`);
   console.log(`\n[${arguments.callee.name}]: 🚀 Done!`);
 
   return await db.find();

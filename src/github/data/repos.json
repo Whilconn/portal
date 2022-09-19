@@ -596,7 +596,7 @@
     "icon": "https://gw.alipayobjects.com/zos/rmsportal/rlpTLlbMzTNYuZGGCVYM.png",
     "stars": 81913,
     "pushTime": 1663516771000,
-    "mirrors": [],
+    "mirrors": ["https://ant-design.antgroup.com/", "https://ant-design.gitee.io/"],
     "tags": [
       {
         "id": "3d8c4e29-6f45-42b0-b057-4ca42d784f31",
@@ -612,10 +612,10 @@
     "homepage": "https://pro.ant.design",
     "repository": "https://github.com/ant-design/ant-design-pro",
     "desc": "开箱即用的中台前端/设计解决方案",
-    "icon": "https://gw.alipayobjects.com/zos/antfincdn/Eb8IHpb9jE/Typescript_logo_2020.svg",
+    "icon": "",
     "stars": 32882,
     "pushTime": 1662604002000,
-    "mirrors": [],
+    "mirrors": ["https://ant-design-pro.gitee.io/"],
     "tags": [
       {
         "id": "3d8c4e29-6f45-42b0-b057-4ca42d784f31",
@@ -634,7 +634,7 @@
     "icon": "https://gw.alipayobjects.com/zos/bmw-prod/69a27fcc-ce52-4f27-83f1-c44541e9b65d.svg",
     "stars": 10513,
     "pushTime": 1663325778000,
-    "mirrors": [],
+    "mirrors": ["https://ant-design-mobile.antgroup.com/"],
     "tags": [
       {
         "id": "3d8c4e29-6f45-42b0-b057-4ca42d784f31",
@@ -691,7 +691,7 @@
     "icon": "https://img.alicdn.com/tfs/TB1Jr2ASQvoK1RjSZFDXXXY3pXa-200-200.png",
     "stars": 8258,
     "pushTime": 1663497775000,
-    "mirrors": [],
+    "mirrors": ["https://ng-zorro.gitee.io/"],
     "tags": [
       {
         "id": "3d8c4e29-6f45-42b0-b057-4ca42d784f31",
@@ -1349,6 +1349,15 @@
     "updateTime": 1663518836743
   },
   {
+    "repository": "https://github.com/octalmage/robotjs",
+    "tags": [
+      {
+        "id": "83ed90d2-d0d1-4e04-865d-6d37f30a3f82",
+        "name": "Node.js"
+      }
+    ]
+  },
+  {
     "name": "Express",
     "homepage": "https://expressjs.com",
     "repository": "https://github.com/expressjs/express",
@@ -1711,12 +1720,8 @@
   },
   {
     "name": "TypeScript",
-    "homepage": "https://zhongsp.gitbooks.io/typescript-handbook/",
-    "repository": "https://github.com/zhongsp/TypeScript",
+    "repository": "https://github.com/microsoft/TypeScript",
     "desc": "JavaScript 超集",
-    "icon": "https://zhongsp.gitbooks.io/typescript-handbook/gitbook/images/apple-touch-icon-precomposed-152.png",
-    "stars": 6092,
-    "pushTime": 1660975345000,
     "mirrors": [],
     "tags": [
       {
