@@ -1,6 +1,8 @@
 const { rawAxios } = require('../utils/request');
 const { loadDocument } = require('../utils/dom-util');
 
+// TODO: get icon from https://simpleicons.org/
+
 async function loadFavicon(iconLink, toBase64) {
   const icon = await rawAxios(iconLink, { responseType: 'arraybuffer' })
     .then((res) => {

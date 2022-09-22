@@ -14,6 +14,7 @@
   {
     "name": "规范标准",
     "list": [
+      { "name": "", "homepage": "https://codeguide.bootcss.com/", "repository": "https://github.com/mdo/code-guide" },
       {
         "name": "MDN",
         "homepage": "https://developer.mozilla.org/zh-CN/docs/Web",
@@ -37,17 +38,41 @@
       },
       {
         "name": "GraphQL",
-        "homepage": "http://graphql.cn/",
+        "homepage": "http://graphql.org/graphql-js/",
         "desc": "一种用于 API 的查询语言",
-        "icon": "",
-        "repository": ""
+        "icon": "http://graphql.org/favicon.ico",
+        "repository": "https://github.com/graphql/graphql-js",
+        "stars": 19046,
+        "pushTime": 1663600403000,
+        "mirrors": [],
+        "tags": [
+          {
+            "id": "9045ae09-b5a2-4b4d-bdf1-a6f25bfea527",
+            "name": "API"
+          }
+        ],
+        "id": "a52d5080-686f-4313-82d7-ce455f13bf98",
+        "createTime": 1663518904890,
+        "updateTime": 1663608371435
       },
       {
         "name": "OpenAPI",
         "homepage": "https://openapis.org",
         "desc": "OpenAPI 规范为 RESTful API 定义了一个与语言无关的标准接口",
-        "icon": "",
-        "repository": "https://github.com/OAI/OpenAPI-Specification"
+        "icon": "https://www.openapis.org/wp-content/uploads/sites/3/2016/11/favicon.png",
+        "repository": "https://github.com/OAI/OpenAPI-Specification",
+        "stars": 24991,
+        "pushTime": 1663014686000,
+        "mirrors": [],
+        "tags": [
+          {
+            "id": "9045ae09-b5a2-4b4d-bdf1-a6f25bfea527",
+            "name": "API"
+          }
+        ],
+        "id": "af42f5a9-6ebd-4163-b018-3abea83634db",
+        "createTime": 1663518941711,
+        "updateTime": 1663608388006
       },
       {
         "name": "Markdown 基本语法",
